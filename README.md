@@ -1,4 +1,4 @@
-# @company/ui
+# @go/ui
 
 A React + Tailwind CSS component library built on [Untitled UI React](https://github.com/untitleduico/react), painted with the company brand. One package gives your app the full component set, the correct design tokens, and a suite of shared utility functions.
 
@@ -32,11 +32,11 @@ A React + Tailwind CSS component library built on [Untitled UI React](https://gi
 ## Installation
 
 ```bash
-pnpm add @company/ui
+pnpm add @go/ui
 # or
-npm install @company/ui
+npm install @go/ui
 # or
-yarn add @company/ui
+yarn add @go/ui
 ```
 
 Peer dependencies — your app must already have these:
@@ -54,14 +54,14 @@ pnpm add react react-dom react-aria-components
 ```css
 /* app/globals.css  (or wherever your Tailwind entry lives) */
 @import "tailwindcss";
-@import "@company/ui/styles";
+@import "@go/ui/styles";
 ```
 
 If you only need the brand token overrides without the full Tailwind base (e.g. you already import Tailwind separately):
 
 ```css
 @import "tailwindcss";
-@import "@company/ui/theme";   /* brand tokens only */
+@import "@go/ui/theme";   /* brand tokens only */
 ```
 
 Once imported, every brand token is available as a Tailwind utility in your app:
@@ -83,7 +83,7 @@ Once imported, every brand token is available as a Tailwind utility in your app:
 Compose `Input`, `Checkbox`, `Button`, and `Typography` to build consistent form UI.
 
 ```tsx
-import { Button, Checkbox, Input, Typography } from '@company/ui';
+import { Button, Checkbox, Input, Typography } from '@go/ui';
 
 export function LoginForm() {
   return (
@@ -95,7 +95,7 @@ export function LoginForm() {
         <Input
           id="email"
           type="email"
-          placeholder="you@company.com"
+          placeholder="you@go.com"
           autoComplete="email"
         />
       </div>
@@ -134,7 +134,7 @@ export function LoginForm() {
 Use `Modal`, `ModalTrigger`, `Button`, and `Typography` together. `ModalTrigger` is a re-export of React Aria's `DialogTrigger` — any element inside it that has `slot="trigger"` opens the dialog.
 
 ```tsx
-import { Button, Modal, ModalTrigger, Typography } from '@company/ui';
+import { Button, Modal, ModalTrigger, Typography } from '@go/ui';
 
 export function DeleteAccountModal() {
   return (
@@ -174,7 +174,7 @@ export function DeleteAccountModal() {
 `Notification` is a standalone banner component. Pass an `icon`, `title`, `description`, and optionally an `action` link.
 
 ```tsx
-import { Notification } from '@company/ui';
+import { Notification } from '@go/ui';
 import { AlertTriangle } from '@untitledui/icons';
 
 export function StorageBanner() {
@@ -219,7 +219,7 @@ export function SyncStatus({ hasSyncError }: { hasSyncError: boolean }) {
 
 ```tsx
 import { useState } from 'react';
-import { Button, SelectionCard, SelectionCardGrid, Typography } from '@company/ui';
+import { Button, SelectionCard, SelectionCardGrid, Typography } from '@go/ui';
 import { BuildingIcon, PersonIcon, TeamIcon } from '@untitledui/icons';
 
 type AccountType = 'individual' | 'team' | 'enterprise';
@@ -291,7 +291,7 @@ The `highlighted` variant is intended for a pre-recommended option (e.g. most po
 `ButtonGroup` and `ButtonGroupItem` implement a toggle group (single or multiple selection) using React Aria's `ToggleButtonGroup`. Keyboard navigation and ARIA roles are handled automatically.
 
 ```tsx
-import { ButtonGroup, ButtonGroupItem } from '@company/ui';
+import { ButtonGroup, ButtonGroupItem } from '@go/ui';
 
 // Single-select — e.g. chart time range
 export function TimeRangePicker() {
@@ -347,7 +347,7 @@ export function ViewToggle() {
 The `/utils` entry point exports locale-aware formatting helpers. Import them independently — they are tree-shakeable and add no component code to your bundle.
 
 ```tsx
-import { formatCurrency, formatDate, formatNumber, formatRelativeTime, truncate } from '@company/ui/utils';
+import { formatCurrency, formatDate, formatNumber, formatRelativeTime, truncate } from '@go/ui/utils';
 
 // Currency — respects locale by default, USD fallback
 formatCurrency(4999.5);                          // "$4,999.50"
@@ -374,8 +374,8 @@ truncate('The quick brown fox jumped over the lazy dog', 30);
 Using in a component:
 
 ```tsx
-import { Typography } from '@company/ui';
-import { formatCurrency, formatRelativeTime } from '@company/ui/utils';
+import { Typography } from '@go/ui';
+import { formatCurrency, formatRelativeTime } from '@go/ui/utils';
 
 export function InvoiceRow({ amount, date }: { amount: number; date: string }) {
   return (
@@ -401,8 +401,8 @@ export function InvoiceRow({ amount, date }: { amount: number; date: string }) {
 
 ```tsx
 import { useState } from 'react';
-import { createOptimisticUpdate } from '@company/ui/utils';
-import { Checkbox } from '@company/ui';
+import { createOptimisticUpdate } from '@go/ui/utils';
+import { Checkbox } from '@go/ui';
 
 export function TaskItem({ id, completed }: { id: string; completed: boolean }) {
   const [isDone, setIsDone] = useState(completed);
@@ -432,7 +432,7 @@ export function TaskItem({ id, completed }: { id: string; completed: boolean }) 
 `withRetry` wraps any async function with exponential backoff. Use it for uploads, flaky API calls, or any transient network operation.
 
 ```tsx
-import { withRetry } from '@company/ui/utils';
+import { withRetry } from '@go/ui/utils';
 
 // Retry up to 4 times, starting at 500 ms
 const result = await withRetry(
@@ -445,8 +445,8 @@ const result = await withRetry(
 
 ```tsx
 import { useCallback } from 'react';
-import { debounce, throttle } from '@company/ui/utils';
-import { Input } from '@company/ui';
+import { debounce, throttle } from '@go/ui/utils';
+import { Input } from '@go/ui';
 
 export function SearchInput({ onSearch }: { onSearch: (q: string) => void }) {
   // Fire at most once per 300 ms after the user stops typing
@@ -630,14 +630,14 @@ shadow-xl               (modals)
 <Typography variant="h1" as="h2">Section title</Typography>
 ```
 
-**Import utils from the separate entry point.** Importing from `@company/ui/utils` rather than `@company/ui` ensures the utility bundle is split from the component bundle, keeping your component chunk lean.
+**Import utils from the separate entry point.** Importing from `@go/ui/utils` rather than `@go/ui` ensures the utility bundle is split from the component bundle, keeping your component chunk lean.
 
 ```ts
 // Correct — separate bundle
-import { formatCurrency } from '@company/ui/utils';
+import { formatCurrency } from '@go/ui/utils';
 
 // Wrong — pulls in the entire component bundle
-import { formatCurrency } from '@company/ui';
+import { formatCurrency } from '@go/ui';
 ```
 
 **Clean up interaction utilities.** `handleOutsideClick`, `handleEscapeKey`, and `trapFocus` attach DOM event listeners and return cleanup functions. Always call the cleanup in `useEffect`'s return to prevent listener leaks.
@@ -654,7 +654,7 @@ The package exports ESM only. There is no CJS output. Ensure your registry and a
 
 ```json
 {
-  "name": "@company/ui",
+  "name": "@go/ui",
   "type": "module",
   "exports": {
     ".":         { "import": "./dist/index.js",       "types": "./dist/index.d.ts" },
@@ -676,14 +676,14 @@ pnpm build       # compiles ESM + emits .d.ts declarations
 1. **Install the package and peer dependencies**
 
    ```bash
-   pnpm add @company/ui react react-dom react-aria-components
+   pnpm add @go/ui react react-dom react-aria-components
    ```
 
 2. **Import styles in your CSS entry point** (see [CSS setup](#css-setup))
 
    ```css
    @import "tailwindcss";
-   @import "@company/ui/styles";
+   @import "@go/ui/styles";
    ```
 
 3. **Configure Tailwind to scan the package source** (optional but recommended for IDE autocomplete)
@@ -692,16 +692,16 @@ pnpm build       # compiles ESM + emits .d.ts declarations
 
    ```css
    @import "tailwindcss";
-   @import "@company/ui/styles";
-   @source "../node_modules/@company/ui/dist";
+   @import "@go/ui/styles";
+   @source "../node_modules/@go/ui/dist";
    ```
 
 4. **Use components and utilities**
 
    ```tsx
-   import { Button, Typography } from '@company/ui';
-   import { formatCurrency } from '@company/ui/utils';
-   import '@company/ui/styles';  // if using JS import rather than CSS @import
+   import { Button, Typography } from '@go/ui';
+   import { formatCurrency } from '@go/ui/utils';
+   import '@go/ui/styles';  // if using JS import rather than CSS @import
    ```
 
 ### Next.js
@@ -710,7 +710,7 @@ pnpm build       # compiles ESM + emits .d.ts declarations
 // next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@company/ui'],
+  transpilePackages: ['@go/ui'],
 };
 
 export default nextConfig;
@@ -719,16 +719,16 @@ export default nextConfig;
 ```css
 /* app/globals.css */
 @import "tailwindcss";
-@import "@company/ui/styles";
+@import "@go/ui/styles";
 ```
 
-### Vite
+### Webpack
 
-No extra config needed — Vite handles ESM packages natively. Just ensure `@import "@company/ui/styles"` is in your CSS entry point.
+No extra config needed — Webpack handles ESM packages natively. Just ensure `@import "@go/ui/styles"` is in your CSS entry point.
 
 ### TypeScript path resolution
 
-If you use `paths` in `tsconfig.json`, the package exports field takes precedence in bundler mode. No additional TypeScript config is needed for `moduleResolution: "bundler"` (the default for Vite and Next.js 14+).
+If you use `paths` in `tsconfig.json`, the package exports field takes precedence in bundler mode. No additional TypeScript config is needed for `moduleResolution: "bundler"` (the default for Webpack and Next.js 14+).
 
 For `moduleResolution: "node16"` or `"nodenext"`:
 
