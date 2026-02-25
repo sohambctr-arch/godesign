@@ -1,0 +1,77 @@
+{
+  "components": [
+    {
+      "name": "Button",
+      "untitleduiName": "button",
+      "available": true,
+      "variants": ["brand-solid", "secondary", "disabled"],
+      "sizes": ["sm", "md"],
+      "states": ["default", "disabled"]
+    },
+    {
+      "name": "SelectionCard",
+      "untitleduiName": null,
+      "available": false,
+      "note": "Custom component — build from scratch using token variables and forwardRef + cx() pattern",
+      "variants": ["default", "selected", "highlighted"],
+      "sizes": ["standard", "compact"],
+      "states": ["default", "hover", "selected"]
+    },
+    {
+      "name": "Notification",
+      "untitleduiName": "notification",
+      "available": true,
+      "variants": ["warning"],
+      "sizes": ["standard"],
+      "states": ["default"]
+    },
+    {
+      "name": "Modal",
+      "untitleduiName": "modal",
+      "available": true,
+      "variants": ["confirmation"],
+      "sizes": ["standard"],
+      "states": ["open"]
+    },
+    {
+      "name": "Input",
+      "untitleduiName": "input",
+      "available": true,
+      "variants": ["default"],
+      "sizes": ["md"],
+      "states": ["default", "placeholder"]
+    },
+    {
+      "name": "Textarea",
+      "untitleduiName": "textarea",
+      "available": true,
+      "variants": ["default"],
+      "sizes": ["md"],
+      "states": ["default", "placeholder"]
+    },
+    {
+      "name": "ButtonGroup",
+      "untitleduiName": "button-group",
+      "available": true,
+      "variants": ["default"],
+      "sizes": ["md"],
+      "states": ["default"]
+    },
+    {
+      "name": "Badge",
+      "untitleduiName": "badge",
+      "available": true,
+      "variants": ["blue-light"],
+      "sizes": ["sm"],
+      "states": ["default"]
+    },
+    {
+      "name": "Checkbox",
+      "untitleduiName": "checkbox",
+      "available": true,
+      "variants": ["default"],
+      "sizes": ["sm"],
+      "states": ["default", "unchecked"]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "frameName": "Start / Step 2 - Areas Selection / Highlighted Reference",
+  "figmaUrl": "https://www.figma.com/design/fHEarGuK8hp7rFNqtXbfqd/GO-Foundry-%C2%B7-UI?node-id=2035-11290",
+  "tokens": {
+    "color": {
+      "brand": {
+        "25": "rgb(255 247 244)",
+        "solid": "rgb(232 91 49)",
+        "primary-bg": "rgb(255 239 233)",
+        "utility-200": "rgb(253 215 203)",
+        "utility-300-alt": "rgb(251 184 164)",
+        "secondary-700": "rgb(199 71 36)"
+      },
+      "text": {
+        "primary-900": "rgb(24 29 39)",
+        "secondary-700": "rgb(65 70 81)",
+        "tertiary-600": "rgb(83 88 98)",
+        "quaternary-500": "rgb(113 118 128)",
+        "disabled": "rgb(113 118 128)",
+        "white": "rgb(255 255 255)"
+      },
+      "border": {
+        "primary": "rgb(213 215 218)",
+        "disabled-subtle": "rgb(233 234 235)",
+        "brand-alt": "rgb(232 91 49)",
+        "secondary-alt": "rgba(0 0 0 / 0.08)"
+      },
+      "background": {
+        "primary": "rgb(255 255 255)",
+        "primary-alt": "rgb(255 255 255)",
+        "secondary-alt": "rgb(250 250 250)",
+        "disabled": "rgb(245 245 245)",
+        "brand-solid": "rgb(232 91 49)",
+        "brand-primary": "rgb(255 239 233)"
+      },
+      "semantic": {
+        "warning-primary": "rgb(220 104 3)"
+      }
+    },
+    "typography": {
+      "text-xs-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.12px"
+      },
+      "text-xs-medium": {
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "12px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.12px"
+      },
+      "text-sm-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "-0.14px"
+      },
+      "text-sm-semibold": {
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px"
+      },
+      "text-md-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "0px"
+      },
+      "text-md-medium": {
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "0px"
+      },
+      "display-xs-semibold": {
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "fontSize": "24px",
+        "lineHeight": "32px",
+        "letterSpacing": "0px"
+      }
+    },
+    "spacing": {
+      "baseUnit": "4px",
+      "scale": ["0px", "2px", "4px", "6px", "8px", "12px", "14px", "16px", "24px", "32px", "48px", "80px"],
+      "named": {
+        "xxs": "2px",
+        "xs": "4px",
+        "sm": "6px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "3xl": "24px",
+        "4xl": "32px",
+        "6xl": "48px",
+        "8xl": "80px"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "md": "8px",
+      "xl": "12px",
+      "2xl": "16px",
+      "full": "9999px",
+      "circular": "100px"
+    },
+    "shadow": {
+      "xs": "0px 1px 2px 0px rgba(10,13,18,0.05)",
+      "xs-skeuomorphic": "0px 1px 2px 0px rgba(10,13,18,0.05), inset 0px 0px 0px 1px rgba(10,13,18,0.18), inset 0px -2px 0px 0px rgba(10,13,18,0.05)",
+      "lg": "0px 2px 2px -1px rgba(10,13,18,0.04), 0px 4px 6px -2px rgba(10,13,18,0.03), 0px 12px 16px -4px rgba(10,13,18,0.08)"
+    },
+    "grid": {
+      "maxWidth": "1440px",
+      "containerPaddingDesktop": "32px",
+      "contentMaxWidth": "654px"
+    }
+  },
+  "components": {
+    "Button": {
+      "untitleduiName": "button",
+      "available": true,
+      "variants": ["brand-solid", "secondary", "disabled"],
+      "sizes": ["sm", "md"],
+      "states": ["default", "disabled"],
+      "tokenNotes": {
+        "brand-solid-bg": "var(--colors/background/bg-brand-solid) = rgb(232 91 49)",
+        "brand-solid-border": "rgba(255,255,255,0.12) inner border",
+        "secondary-bg": "var(--colors/background/bg-primary) = white",
+        "secondary-border": "var(--colors/border/border-primary) = rgb(213 215 218)",
+        "disabled-bg": "var(--colors/background/bg-disabled) = rgb(245 245 245)",
+        "disabled-border": "var(--colors/border/border-disabled_subtle) = rgb(233 234 235)",
+        "paddingSm": "py-8px px-12px",
+        "paddingMd": "py-10px px-14px",
+        "radius": "var(--radius-full) = 9999px"
+      }
+    },
+    "SelectionCards": {
+      "untitleduiName": null,
+      "available": false,
+      "variants": ["default", "selected"],
+      "sizes": ["standard"],
+      "states": ["default", "selected"],
+      "tokenNotes": {
+        "default-bg": "var(--colors/background/bg-primary) = white",
+        "default-border": "var(--colors/border/border-primary) = rgb(213 215 218)",
+        "selected-bg": "var(--colors/brand/25) = rgb(255 247 244)",
+        "selected-border": "var(--component-colors/utility/brand/utility-brand-300_alt) = rgb(251 184 164)",
+        "icon-default-bg": "var(--colors/background/bg-brand-primary) = rgb(255 239 233)",
+        "icon-selected-bg": "var(--component-colors/utility/brand/utility-brand-200) = rgb(253 215 203)",
+        "cardWidth": "304px",
+        "cardPadding": "24px",
+        "radius": "var(--radius-2xl) = 16px",
+        "iconSize": "40px",
+        "iconRadius": "100px",
+        "gridColumns": 3,
+        "gridGap": "24px"
+      }
+    },
+    "Notification": {
+      "untitleduiName": "notification",
+      "available": true,
+      "variants": ["warning"],
+      "sizes": ["standard"],
+      "states": ["default"],
+      "tokenNotes": {
+        "bg": "var(--colors/background/bg-primary_alt) = white",
+        "border": "var(--colors/border/border-secondary_alt) = rgba(0,0,0,0.08)",
+        "shadow": "var(shadow-lg)",
+        "radius": "var(--radius-xl) = 12px",
+        "padding": "16px"
+      }
+    }
+  }
+}

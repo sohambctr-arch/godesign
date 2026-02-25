@@ -1,0 +1,94 @@
+/* ─── Base Untitled UI tokens ── do not edit this block ─────────────────── */
+/* Installed via: npx untitledui@latest add <component>                       */
+/* This block is managed by the Untitled UI CLI. Do not modify manually.      */
+@theme {
+  /* populated by CLI */
+}
+
+/* ─── GreyOrange brand overrides ── edit only this block ────────────────── */
+@theme {
+
+  /* ── Fonts ──────────────────────────────────────────────────────────────── */
+  /* Inter throughout — no custom brand font observed in Figma extraction.     */
+  --font-body:    Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ── Brand colour ramp ───────────────────────────────────────────────────── */
+  --color-brand-25:  rgb(255 247 244);  /* highlighted SelectionCard background */
+  --color-brand-100: rgb(255 239 233);  /* brand-primary-bg — light orange wash */
+  --color-brand-200: rgb(253 215 203);  /* highlighted SelectionCard icon background */
+  --color-brand-300: rgb(251 184 164);  /* highlighted SelectionCard border */
+  --color-brand-600: rgb(232 91 49);    /* primary interactive — brand solid */
+  --color-brand-700: rgb(199 71 36);    /* hover / link state */
+  --color-brand-solid: var(--color-brand-600);
+  --color-brand-solid_hover: var(--color-brand-700);
+  /* ── Utility colours — blue-light (Beta badge) ──────────────────────────── */
+  /* No Untitled UI equivalent found — defined as brand additions.             */
+  --color-blue-light-50:  rgb(240 249 255);
+  --color-blue-light-200: rgb(185 230 254);
+  --color-blue-light-700: rgb(2 106 162);
+
+  /* ── Surface / overlay ───────────────────────────────────────────────────── */
+  --color-bg-overlay: rgb(10 13 18);    /* modal backdrop at 70% opacity + 8px blur */
+
+  /* ── Typography scale ───────────────────────────────────────────────────── */
+  /* Tailwind base already provides text-xs (0.75rem) and text-sm (0.875rem). */
+  /* Override only the line-height companion for text-xs: Figma specifies     */
+  /* 18px (ratio 1.5) vs Tailwind's default calc(1 / 0.75) = 1.333 (16px).   */
+  --text-xs--line-height: 1.5;
+
+  /* text-md is Untitled UI's 16px step — not in Tailwind's base scale.       */
+  --text-md:              1rem;
+  --text-md--line-height: 1.5;          /* 24px / 16px = 1.5 */
+
+  /* display-xs and display-sm are Untitled UI-specific heading sizes.         */
+  /* display-sm is the Untitled UI standard h1 size. The CLI-managed base      */
+  /* @theme block is empty (no typography component installed via CLI), so      */
+  /* these tokens are defined here until `npx untitledui@latest add typography` */
+  /* populates the base block. cx.ts already registers display-sm for merging. */
+  --text-display-xs:              1.5rem;
+  --text-display-xs--line-height: calc(2 / 1.5);       /* 32px / 24px */
+
+  --text-display-sm:              1.875rem;
+  --text-display-sm--line-height: calc(2.375 / 1.875); /* 38px / 30px */
+
+  /* ── Border radius ───────────────────────────────────────────────────────── */
+  --radius-xs:  4px;
+  --radius-md:  8px;
+  --radius-xl:  12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;               /* variable-width pills */
+  --radius-circular: 100px;            /* fixed-size circular icon containers — NOT a pill */
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  --shadow-xs: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  /* Skeuomorphic button shadow — used on all button variants (brand-solid,    */
+  /* secondary, disabled). Combines outer drop shadow + inner border +         */
+  /* inner bottom shadow for depth. No Untitled UI equivalent.                 */
+  --shadow-xs-skeuomorphic:
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05),
+    inset 0px 0px 0px 1px rgba(10, 13, 18, 0.18),
+    inset 0px -2px 0px 0px rgba(10, 13, 18, 0.05);
+
+  --shadow-md:
+    0px 2px 2px -1px rgba(10, 13, 18, 0.04),
+    0px 4px 6px -2px rgba(10, 13, 18, 0.03),
+    0px 12px 16px -4px rgba(10, 13, 18, 0.08);  /* notifications / card elevation */
+
+  --shadow-xl:
+    0px 3px 3px -1.5px rgba(10, 13, 18, 0.04),
+    0px 8px 8px -4px rgba(10, 13, 18, 0.03),
+    0px 20px 24px -4px rgba(10, 13, 18, 0.08);   /* modal elevation */
+
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  --max-width-container: 1440px;
+  /* Note: grid.contentMaxWidth (654px / 760px / 844px) is per-screen and is  */
+  /* not a global token. Each step component applies its own max-width.        */
+
+  /* ── Omitted / deferred ──────────────────────────────────────────────────── */
+  /* darkMode.tokenValues — dark mode token values were not extractable from   */
+  /* the rendered Figma screenshot alone. Extract from Figma Tokens plugin or  */
+  /* Untitled UI dark variable set in a future scope.                           */
+
+}

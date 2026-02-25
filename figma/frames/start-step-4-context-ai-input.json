@@ -1,0 +1,159 @@
+{
+  "frameName": "Start / Step 4 - Context / Manual Values (AI Input Variant)",
+  "figmaUrl": "https://www.figma.com/design/fHEarGuK8hp7rFNqtXbfqd/GO-Foundry-%C2%B7-UI?node-id=2042-19970",
+  "tokens": {
+    "color": {
+      "brand": {
+        "solid": "rgb(232 91 49)"
+      },
+      "text": {
+        "primary-900": "rgb(24 29 39)",
+        "secondary-700": "rgb(65 70 81)",
+        "tertiary-600": "rgb(83 88 98)",
+        "quaternary-500": "rgb(113 118 128)",
+        "disabled": "rgb(113 118 128)",
+        "placeholder": "rgb(113 118 128)",
+        "white": "rgb(255 255 255)"
+      },
+      "border": {
+        "primary": "rgb(213 215 218)"
+      },
+      "background": {
+        "primary": "rgb(255 255 255)",
+        "secondary-alt": "rgb(250 250 250)",
+        "brand-solid": "rgb(232 91 49)"
+      },
+      "semantic": {},
+      "utility": {
+        "blue-light-50": "rgb(240 249 255)",
+        "blue-light-200": "rgb(185 230 254)",
+        "blue-light-700": "rgb(2 106 162)"
+      }
+    },
+    "typography": {
+      "text-xs-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.12px"
+      },
+      "text-xs-medium": {
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "12px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.12px"
+      },
+      "text-sm-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "-0.14px"
+      },
+      "text-sm-semibold": {
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px"
+      },
+      "text-md-regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "0px"
+      },
+      "text-md-medium": {
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "0px"
+      },
+      "display-xs-semibold": {
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "fontSize": "24px",
+        "lineHeight": "32px",
+        "letterSpacing": "0px"
+      }
+    },
+    "spacing": {
+      "baseUnit": "4px",
+      "scale": ["0px", "2px", "4px", "6px", "8px", "12px", "14px", "16px", "24px", "32px", "48px"],
+      "named": {
+        "xxs": "2px",
+        "xs": "4px",
+        "sm": "6px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "3xl": "24px",
+        "4xl": "32px",
+        "6xl": "48px"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "md": "8px",
+      "xl": "12px",
+      "2xl": "16px",
+      "full": "9999px"
+    },
+    "shadow": {
+      "xs": "0px 1px 2px 0px rgba(10,13,18,0.05)",
+      "xs-skeuomorphic": "0px 1px 2px 0px rgba(10,13,18,0.05), inset 0px 0px 0px 1px rgba(10,13,18,0.18), inset 0px -2px 0px 0px rgba(10,13,18,0.05)"
+    },
+    "grid": {
+      "maxWidth": "1440px",
+      "contentMaxWidth": "844px"
+    }
+  },
+  "components": {
+    "Button": {
+      "untitleduiName": "button",
+      "available": true,
+      "variants": ["brand-solid", "secondary"],
+      "sizes": ["sm"],
+      "states": ["default"],
+      "tokenNotes": {
+        "brand-solid-bg": "rgb(232 91 49)",
+        "radius": "9999px"
+      }
+    },
+    "Textarea": {
+      "untitleduiName": "textarea",
+      "available": true,
+      "variants": ["default"],
+      "sizes": ["md"],
+      "states": ["default", "placeholder"],
+      "tokenNotes": {
+        "bg": "white",
+        "border": "rgb(213 215 218)",
+        "shadow": "shadow-xs",
+        "radius": "8px",
+        "padding": "py-12px px-14px pb-48px",
+        "placeholderText": "rgb(113 118 128)",
+        "resizeHandle": "visible bottom-right"
+      }
+    },
+    "Badge": {
+      "untitleduiName": "badge",
+      "available": true,
+      "variants": ["blue-light"],
+      "sizes": ["sm"],
+      "states": ["default"],
+      "tokenNotes": {
+        "bg": "rgb(240 249 255)",
+        "border": "rgb(185 230 254)",
+        "text": "rgb(2 106 162)",
+        "radius": "9999px",
+        "padding": "py-2px px-8px",
+        "label": "Beta"
+      }
+    }
+  }
+}

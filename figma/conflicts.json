@@ -1,0 +1,183 @@
+{
+  "conflicts": [
+    {
+      "token": "grid.contentMaxWidth",
+      "type": "value-mismatch",
+      "values": [
+        {
+          "value": "654px",
+          "seenIn": [
+            "start-step-2-areas-selection-highlighted-reference",
+            "start-step-2-areas-selection-default",
+            "start-step-2-areas-selection-default-dark",
+            "start-step-2-full-warehouse-confirm-moving-forward"
+          ]
+        },
+        {
+          "value": "760px",
+          "seenIn": ["start-step-4-context-manual-values"]
+        },
+        {
+          "value": "844px",
+          "seenIn": ["start-step-4-context-ai-input"]
+        }
+      ],
+      "resolution": "per-screen layout values — not a single global CSS variable. Omit from theme.css. Each screen/step component applies its own max-width inline."
+    },
+    {
+      "token": "color.brand.utility-200",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(253 215 203)",
+          "seenIn": ["start-step-2-areas-selection-highlighted-reference"],
+          "context": "Selected/highlighted SelectionCard icon background"
+        }
+      ],
+      "untitleduiCandidates": ["--color-brand-200"],
+      "resolution": "map to --color-brand-200: rgb(253 215 203)"
+    },
+    {
+      "token": "color.brand.utility-300-alt",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(251 184 164)",
+          "seenIn": ["start-step-2-areas-selection-highlighted-reference"],
+          "context": "Highlighted SelectionCard border colour (not selected, pre-selected state)"
+        }
+      ],
+      "untitleduiCandidates": ["--color-brand-300"],
+      "resolution": "map to --color-brand-300: rgb(251 184 164)"
+    },
+    {
+      "token": "color.brand.25",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(255 247 244)",
+          "seenIn": ["start-step-2-areas-selection-highlighted-reference"],
+          "context": "Highlighted SelectionCard background"
+        }
+      ],
+      "untitleduiCandidates": ["--color-brand-25"],
+      "resolution": "map to --color-brand-25: rgb(255 247 244)"
+    },
+    {
+      "token": "color.brand.secondary-700",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(199 71 36)",
+          "seenIn": ["start-step-2-areas-selection-highlighted-reference"],
+          "context": "Brand-secondary text link colour in Notification action"
+        }
+      ],
+      "untitleduiCandidates": ["--color-brand-700"],
+      "resolution": "map to --color-brand-700: rgb(199 71 36) — darker brand shade used for hover and link states"
+    },
+    {
+      "token": "color.utility.blue-light-50",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(240 249 255)",
+          "seenIn": ["start-step-4-context-ai-input"],
+          "context": "Beta badge background"
+        }
+      ],
+      "untitleduiCandidates": [],
+      "resolution": "define net-new variable --color-blue-light-50: rgb(240 249 255) in brand overrides block"
+    },
+    {
+      "token": "color.utility.blue-light-200",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(185 230 254)",
+          "seenIn": ["start-step-4-context-ai-input"],
+          "context": "Beta badge border"
+        }
+      ],
+      "untitleduiCandidates": [],
+      "resolution": "define net-new variable --color-blue-light-200: rgb(185 230 254) in brand overrides block"
+    },
+    {
+      "token": "color.utility.blue-light-700",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(2 106 162)",
+          "seenIn": ["start-step-4-context-ai-input"],
+          "context": "Beta badge text colour"
+        }
+      ],
+      "untitleduiCandidates": [],
+      "resolution": "define net-new variable --color-blue-light-700: rgb(2 106 162) in brand overrides block"
+    },
+    {
+      "token": "color.background.overlay",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "rgb(10 13 18)",
+          "seenIn": ["start-step-2-full-warehouse-confirm-moving-forward"],
+          "context": "Modal backdrop overlay colour at 70% opacity with 8px blur"
+        }
+      ],
+      "untitleduiCandidates": ["--color-bg-overlay"],
+      "resolution": "map to --color-bg-overlay: rgb(10 13 18)"
+    },
+    {
+      "token": "darkMode.tokenValues",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "observed-but-not-extracted",
+          "seenIn": ["start-step-2-areas-selection-default-dark"],
+          "context": "Frame 2042:17163 is a full dark-mode variant of the Step 2 screen. CSS variable names are identical to light mode (e.g. --colors/background/bg-secondary_alt) but resolve to dark surface values. The actual dark hex values were not directly observable from the Figma token layer — only the rendered screenshot confirms the dark theme. Human needs to decide: (a) extract dark mode token values from Figma Tokens plugin or style guide, (b) map to Untitled UI's dark mode variable set, or (c) defer dark mode to a later scope."
+        }
+      ],
+      "untitleduiCandidates": [],
+      "resolution": "defer to a later scope — dark mode token values not extractable from rendered screenshot alone. Omit from theme.css for now."
+    },
+    {
+      "token": "radius.circular",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "100px",
+          "seenIn": [
+            "start-step-2-areas-selection-highlighted-reference",
+            "start-step-2-areas-selection-default",
+            "start-step-4-context-manual-values",
+            "start-step-4-context-ai-input"
+          ],
+          "context": "Icon container radius (fully circular pill on fixed-size element). Different from --radius-full (9999px) which is for variable-width pills."
+        }
+      ],
+      "untitleduiCandidates": ["--radius-full"],
+      "resolution": "define net-new variable --radius-circular: 100px in brand overrides block. --radius-full (9999px) is semantically different — it is for variable-width pills, not fixed-size circular containers."
+    },
+    {
+      "token": "shadow.xs-skeuomorphic",
+      "type": "unmapped-token",
+      "values": [
+        {
+          "value": "0px 1px 2px 0px rgba(10,13,18,0.05), inset 0px 0px 0px 1px rgba(10,13,18,0.18), inset 0px -2px 0px 0px rgba(10,13,18,0.05)",
+          "seenIn": [
+            "start-step-2-areas-selection-highlighted-reference",
+            "start-step-2-areas-selection-default",
+            "start-step-2-areas-selection-default-dark",
+            "start-step-2-full-warehouse-confirm-moving-forward",
+            "start-step-4-context-manual-values",
+            "start-step-4-context-ai-input"
+          ],
+          "context": "Skeuomorphic button shadow — used on all button variants. Combines drop shadow + inner border + inner bottom shadow for depth. No direct Untitled UI CSS variable mapping found."
+        }
+      ],
+      "untitleduiCandidates": [],
+      "resolution": "define net-new variable --shadow-xs-skeuomorphic in brand overrides block with the full compound value"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "figma-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types":  "./dist/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "default": "./dist/utils/index.js",
+      "types":  "./dist/utils/index.d.ts"
+    },
+    "./styles": {
+      "import":  "./dist/styles/globals.css",
+      "default": "./dist/styles/globals.css"
+    },
+    "./theme": {
+      "import":  "./dist/styles/theme.css",
+      "default": "./dist/styles/theme.css"
+    }
+  },
+  "scripts": {
+    "build": "pnpm build:esm && pnpm build:types",
+    "build:esm": "webpack --config webpack.config.mjs",
+    "build:types": "tsc --project tsconfig.build.json",
+    "dev": "webpack --config webpack.config.mjs --watch",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "tsc": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  
+  "devDependencies": {
+    "@storybook/react": "^10.2.10",
+    "@storybook/react-webpack5": "^10.2.10",
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "css-loader": "^7.1.4",
+    "mini-css-extract-plugin": "^2.10.0",
+    "postcss-loader": "^8.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "peerDependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "dependencies": {
+    "@react-stately/utils": "^3.11.0",
+    "@untitledui/icons": "^0.0.21",
+    "react-aria-components": "^1.15.1",
+    "tailwind-merge": "^3.5.0"
+  }
+  
+}
