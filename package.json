@@ -7,19 +7,19 @@
     ".": {
       "import": "./dist/index.js",
       "default": "./dist/index.js",
-      "types":  "./dist/index.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./utils": {
       "import": "./dist/utils/index.js",
       "default": "./dist/utils/index.js",
-      "types":  "./dist/utils/index.d.ts"
+      "types": "./dist/utils/index.d.ts"
     },
     "./styles": {
-      "import":  "./dist/styles/globals.css",
+      "import": "./dist/styles/globals.css",
       "default": "./dist/styles/globals.css"
     },
     "./theme": {
-      "import":  "./dist/styles/theme.css",
+      "import": "./dist/styles/theme.css",
       "default": "./dist/styles/theme.css"
     }
   },
@@ -38,7 +38,6 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  
   "devDependencies": {
     "@storybook/react": "^10.2.10",
     "@storybook/react-webpack5": "^10.2.10",
@@ -66,5 +65,4 @@
     "react-aria-components": "^1.15.1",
     "tailwind-merge": "^3.5.0"
   }
-  
 }

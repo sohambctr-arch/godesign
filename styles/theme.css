@@ -85,6 +85,7 @@
   --max-width-container: 1440px;
   /* Note: grid.contentMaxWidth (654px / 760px / 844px) is per-screen and is  */
   /* not a global token. Each step component applies its own max-width.        */
+  --spacing-container-padding: 32px;   /* from tokens.raw.json grid.containerPaddingDesktop */
 
   /* ── Omitted / deferred ──────────────────────────────────────────────────── */
   /* darkMode.tokenValues — dark mode token values were not extractable from   */

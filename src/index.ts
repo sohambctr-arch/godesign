@@ -8,3 +8,8 @@ export { Modal, ModalTrigger, type ModalProps } from './components/Modal/Modal';
 export { Badge, type BadgeProps, type BadgeVariant, type BadgeSize } from './components/Badge/Badge';
 export { Notification, type NotificationProps, type NotificationVariant } from './components/Notification/Notification';
 export { SelectionCard, SelectionCardGrid, type SelectionCardProps, type SelectionCardVariant, type SelectionCardSize } from './components/SelectionCard/SelectionCard';
+export {
+  StepPage, StepContent, StepHeader, StepCard, StepActions,
+  type StepPageProps, type StepContentProps, type StepHeaderProps,
+  type StepCardProps, type StepActionsProps,
+} from './components/StepPage/StepPage';
